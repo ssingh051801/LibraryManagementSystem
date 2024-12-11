@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .header .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .header .nav-buttons a {
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .header .back-button {
+            background-color: #f44336;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .logout-button {
+            background-color: #f44336;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation Buttons -->
+    <div class="header">
+        <h2>Admin Home Page</h2>
+        <div class="nav-buttons">
+            <a href="/chart">Chart</a>
+            <a href="/admin/maintainance">Maintenance</a>
+            <a href="/reports">Reports</a>
+            <a href="/admin/transactions">Transactions</a>
+        </div>
+    </div>
+
+    <!-- Product Details Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Code No From</th>
+                <th>Code No To</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Science Category -->
+            <tr>
+                <td>SC(B/M)000001</td>
+                <td>SC(B/M)000004</td>
+                <td>Science</td>
+            </tr>
+            <!-- Economics Category -->
+            <tr>
+                <td>EC(B/M)000001</td>
+                <td>EC(B/M)000004</td>
+                <td>Economics</td>
+            </tr>
+            <!-- Fiction Category -->
+            <tr>
+                <td>FC(B/M)000001</td>
+                <td>FC(B/M)000004</td>
+                <td>Fiction</td>
+            </tr>
+            <!-- Children Category -->
+            <tr>
+                <td>CH(B/M)000001</td>
+                <td>CH(B/M)000004</td>
+                <td>Children</td>
+            </tr>
+            <!-- Personal Development Category -->
+            <tr>
+                <td>PD(B/M)000001</td>
+                <td>PD(B/M)000004</td>
+                <td>Personal Development</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Log Out Button -->
+    <a href="/admin/adminlogout" class="logout-button">Log Out</a>
+
+    <!-- Back Button -->
+    <div class="header">
+        <a href="/adminlogin" class="nav-buttons back-button">Back</a>
+    </div>
+
+</body>
+</html>

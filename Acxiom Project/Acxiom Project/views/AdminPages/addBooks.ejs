@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book/Movie</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Add Books </h1>
+    <table>
+        <tr>
+            <td><a href="#">Chart</a></td>
+            <td colspan="3"></td>
+            <td><a href="#">Home</a></td>
+        </tr>
+        <tr>
+            <td>Membership</td>
+            <td><a href="#">Add</a></td>
+            <td><a href="#">Update</a></td>
+        </tr>
+        <tr>
+            <td>Books/Movies</td>
+            <td><a href="#">Add</a></td>
+            <td><a href="#">Update</a></td>
+        </tr>
+        <tr>
+            <td>User Management</td>
+            <td><a href="#">Add</a></td>
+            <td><a href="#">Update</a></td>
+        </tr>
+    </table>
+
+    <h3>Add Book/Movie</h3>
+    <form action="/add-book-movie" method="POST">
+        <label>
+            <input type="radio" name="type" value="book" checked> Book
+        </label>
+        <label>
+            <input type="radio" name="type" value="movie"> Movie
+        </label>
+        <br><br>
+
+        <label>Book/Movie Name:
+            <input type="text" name="name" required>
+        </label>
+        <br><br>
+
+        <label>Date of Procurement:
+            <input type="date" name="procurement_date" required>
+        </label>
+        <br><br>
+
+        <label>Quantity/Copies:
+            <input type="number" name="quantity" value="1" required>
+        </label>
+        <br><br>
+
+        <div class="button-group">
+            <button type="reset">Cancel</button>
+            <button type="submit">Confirm</button>
+        </div>
+    </form>
+
+    <a href="/admin/adminlogout">Log Out</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<%- include('./partials/header') %>
+
+<div class="container d-flex justify-content-center align-items-center" style="height:100vh;">
+    <form method="post" action="/admin/login" >
+        <h1>Admin Authentication Page</h1>
+        <table class="table table-bordered table-striped">            
+            <tbody>
+                <tr>
+                    <td>User ID </td>
+                    <td><input type="text" name="enm" placeholder="Enter Name" /></td>
+                </tr>
+
+                <tr>
+                    <td>Emp Password </td>
+                    <td><input type="password" name="pwd" /></td>
+                </tr>
+
+                <tr>                
+                    <td colspan="2" ><input type="submit" name="loginBtn" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+
+<%- include('./partials/footer') %>

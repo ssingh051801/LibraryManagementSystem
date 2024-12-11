@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    div{
+      display: flex;
+      justify-content: space-between;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .logout-btn {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .logout-btn:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="/chart">Chart</a>
+    <br/>
+    <br/>
+    <a href="/">Back</a>
+  </div>
+  <h1>User Home Page
+  </h1>
+  <div>
+    <a href="/Reports">Reports</a>
+    <a href="/user/transactions">Transactions</a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Code No From</th>
+        <th>Code No To</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% const rows = [
+        { from: "SC(B/M)000001", to: "SC(B/M)000004", category: "Science" },
+        { from: "EC(B/M)000001", to: "EC(B/M)000004", category: "Economics" },
+        { from: "FC(B/M)000001", to: "FC(B/M)000004", category: "Fiction" },
+        { from: "CH(B/M)000001", to: "CH(B/M)000004", category: "Children" },
+        { from: "PD(B/M)000001", to: "PD(B/M)000004", category: "Personal Development" },
+      ]; %>
+      <% rows.forEach(row => { %>
+      <tr>
+        <td><%= row.from %></td>
+        <td><%= row.to %></td>
+        <td><%= row.category %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="/user/logout" class="logout-btn">Log Out</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav') %>
+
+<div class="container pt-4">
+    <form method="post" action="/admin/addAdmin" >
+        <h1>
+            Welcome to Admin Profile..
+        </h1>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr align="center"> <th  colspan="2">Add New Employee </th></tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>Emp Name </td>
+                    <td><input type="text" name="enm" /></td>
+                </tr>
+
+                <tr>
+                    <td>Emp Password </td>
+                    <td><input type="password" name="pwd" /></td>
+                </tr>
+                <tr>                
+                    <td colspan="2" align="center" ><input type="submit" name="addEmpBtn" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>
